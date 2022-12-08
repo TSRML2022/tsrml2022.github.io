@@ -9,7 +9,7 @@ if __name__ == '__main__':
     nice_typeset = ''
     for item in accepted_papers.iterrows():
         nice_typeset += f"""
-        <li><b>{item[1]['title']}</b> <br /> {item[1]['authors'].replace('|', '; ')}</li>
+        <li><b><a href="{item[1]['forum']}">{item[1]['title']}</a></b> <br /> {item[1]['authors'].replace('|', '; ')}</li>
         """
     print(nice_typeset)
 
